@@ -9,12 +9,13 @@
  * @returns {Array} - a new array with no strings
  */
 const containsNoNumbers = (arr = []) => {
-  let noNumbers = _;
-  for (const _ of _) {
+  let noNumbers = true;
+  for (const number of arr) { 
+    noNumbers = noNumbers && typeof number !== 'number';
   }
-
   return noNumbers;
 };
+
 
 describe('containsNoNumbers checks if an array contains no numbers', () => {
   describe('it returns true when there are no numbers', () => {
