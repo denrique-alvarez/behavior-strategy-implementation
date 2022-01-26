@@ -9,7 +9,7 @@
  * @returns {boolean} is the string longer than 5?
  */
 const longerThanFive = (str) => {
-  return _;
+  return str.length > 5 ? true : false;
 };
 
 describe('longerThanFive: determines if a string is longer than 5 characters', () => {
