@@ -10,8 +10,8 @@ console.log('-- begin --');
  * @param {string} str - string to check for "!"
  * @returns {boolean} if str contains "!" or not
  */
-const isEnthusiastic = (_) => {
-  return _;
+const isEnthusiastic = (val) => {
+  return val.includes('!') ? true : false;
 };
 
 // this works!  no need to change it
