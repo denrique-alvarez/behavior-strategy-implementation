@@ -10,8 +10,10 @@ console.log('-- begin --');
  * @param {any} val - the value to convert
  * @returns {string} "truey" or "falsey"
  */
-const truthiness = (_) => {
-  return _;
+const truthiness = (val) => {
+  let convert = Boolean(val);
+  if (convert === true) return 'truey';
+  else return 'falsey';  
 };
 
 // this works! no need to change it
