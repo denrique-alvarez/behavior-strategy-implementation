@@ -12,7 +12,9 @@ console.log('-- begin --');
  * @param {any} val
  * @returns {boolean}
  */
-const isFalsy = (_) => {};
+const isFalsy = (val) => {
+  return Boolean(val) === false;
+};
 
 // this works!  no need to change it
 const every = (arr, callback) => {
