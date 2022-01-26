@@ -9,7 +9,7 @@
  * @returns {boolean} is it excited?
  */
 const isExcited = (str) => {
-  return _;
+  return str.includes('!') ? true : false;
 };
 
 describe('isExcited: determines if a string is excited or not', () => {
