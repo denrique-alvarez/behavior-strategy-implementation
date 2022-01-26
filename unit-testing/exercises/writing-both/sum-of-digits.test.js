@@ -21,22 +21,32 @@
  * @example
  * sumOfDigits(312); // -> 6
  */
-const sumOfDigits = () => {};
+const sumOfDigits = (toSum) => {
+  let sum = 0;
+  const toString = String(toSum);
+  const toArr = toString.split('');
 
-describe('', () => {
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+  for (let num of toArr) {
+    num = Number(num);
+    sum = sum + num;
+  }
+  return sum;
+};
+
+describe('Returns the sum of the digits of a given number', () => {
+  describe('Returns the final sum given a number with multiple digits', () => {
+    it('1234 -> 10', () => {
+      const expected = 10;
+      const actual = sumOfDigits(1234);
+      expect(actual).toEqual(expected);
     });
     // ...
   });
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+  describe('Returns the same number given a single digit number', () => {
+    it('5 -> 5', () => {
+      const expected = 5;
+      const actual = sumOfDigits(5);
+      expect(actual).toEqual(expected);
     });
     // ...
   });
