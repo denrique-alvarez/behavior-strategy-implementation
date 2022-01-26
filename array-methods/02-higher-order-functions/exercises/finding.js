@@ -10,8 +10,8 @@ console.log('-- begin --');
  * @param {string} str - the string to check for enthusiasm
  * @returns {boolean}
  */
-const isCurious = (_) => {
-  return _;
+const isCurious = (val) => {
+  return val.includes('?') ? true : false;
 };
 
 // this works! no need to change it
