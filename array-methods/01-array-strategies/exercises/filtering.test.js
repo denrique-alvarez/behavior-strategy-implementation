@@ -10,7 +10,10 @@
  */
 const filterOutStrings = (arr = []) => {
   const noStrings = [];
-  for (const _ of _) {
+  for (const element of arr) {
+    if (typeof element !== 'string') {
+      noStrings.push(element)
+    }
   }
 
   return noStrings;
