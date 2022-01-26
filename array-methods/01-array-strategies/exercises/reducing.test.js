@@ -9,8 +9,9 @@
  * @returns {Array} - a new array with no strings
  */
 const concatenateAsStrings = (arr = []) => {
-  let concatenated = _;
-  for (const _ of _) {
+  let concatenated = '';
+  for (const element of arr) {
+    concatenated += element;
   }
 
   return concatenated;
