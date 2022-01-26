@@ -9,7 +9,7 @@
  * @returns {string} the strings, joined
  */
 const joinWithComma = (acc, next) => {
-  return _;
+  return acc + ', ' + next;
 };
 
 describe('joinWithComma: joins two strings with a comma and a space', () => {
