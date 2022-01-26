@@ -7,7 +7,9 @@
  * @param {any} value - any javascript value
  * @returns {string} the value's type
  */
-const typeofValue = () => {};
+const typeofValue = (any) => {
+  return typeof any;
+};
 
 describe('the function returns the type of any value', () => {
   describe('"string"', () => {
