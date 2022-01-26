@@ -10,7 +10,8 @@
  */
 const mapToNumber = (arr = []) => {
   const numberValues = [];
-  for (const _ of _) {
+  for (const value of arr) {
+    numberValues.push(Number(value));
   }
 
   return numberValues;
