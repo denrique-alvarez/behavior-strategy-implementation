@@ -80,7 +80,7 @@ describe('about expect', () => {
     it('different arrays in memory', () => {
       const arr1 = [1, 2, 3];
       const arr2 = [1, 2, 3];
-      const areTheSameArray = arr1w === arr2;
+      const areTheSameArray = arr1 === arr2;
       expect(areTheSameArray).toEqual(false);
     });
     it('the same object in memory', () => {
