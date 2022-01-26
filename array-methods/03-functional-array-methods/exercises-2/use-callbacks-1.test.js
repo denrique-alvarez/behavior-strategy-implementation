@@ -19,7 +19,7 @@ const numberyNumberify = (arr) => {
   };
 
   // fill in the array methods and which logic to use
-  const allValidNumbers = arr._(_)._(_);
+  const allValidNumbers = arr.map(castToNumber).filter(isNotNaN);
 
   return allValidNumbers;
 };
