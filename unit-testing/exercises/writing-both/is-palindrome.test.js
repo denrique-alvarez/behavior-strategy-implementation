@@ -22,22 +22,43 @@
  * @example
  * isPalindrome('dog'); // -> false
  */
-const isPalindrome = () => {};
+const isPalindrome = (toCheck) => {
+  if (typeof toCheck !== 'string') return false;
+  let result = toCheck.split('').reverse().join('');
+  if (result === toCheck) return true;
+  return false;
+};
 
-describe('', () => {
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+describe('Checks if a string is a palindrome', () => {
+  describe('Returns true if the string is a palindrome', () => {
+    it('Checks if the string "apa" is a palindrome', () => {
+      const expected = true;
+      const actual = isPalindrome('apa');
+      expect(actual).toEqual(expected);
     });
     // ...
   });
-  describe('', () => {
-    it('', () => {
-      const expected = _;
-      const actual = _;
-      expect(_).toEqual(_);
+  describe('Returns false if the string passed is not a palindrome', () => {
+    it('Checks if the string "asdf" is a palindrome', () => {
+      const expected = false;
+      const actual = isPalindrome('asdf');
+      expect(actual).toEqual(expected);
+    });
+    // ...
+  });
+  describe('Returns true if the argument passed is empty', () => {
+    it('Checks if the string "" is a palindrome', () => {
+      const expected = true;
+      const actual = isPalindrome('');
+      expect(actual).toEqual(expected);
+    });
+    // ...
+  });
+  describe('Returns false if the argument passed is not a string', () => {
+    it('Checks if the string "" is a palindrome', () => {
+      const expected = false;
+      const actual = isPalindrome(123);
+      expect(actual).toEqual(expected);
     });
     // ...
   });
