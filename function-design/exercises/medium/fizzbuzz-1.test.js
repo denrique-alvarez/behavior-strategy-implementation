@@ -12,15 +12,24 @@
  *    num must be an integer greater than or equal to 0
  *  @returns {number|string} either "fizz", "buzz", "fizzbuzz" or the original number
  */
-const stub = () => {};
+const stub = (num = 0) => {
+
+  if (!Number.isInteger(num)) return 'Enter an integer';
+  if (num <= 0) return 'Enter a positive number';
+
+  if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+  else if (num % 3 === 0) return 'fizz';
+  else if (num % 5 === 0) return 'buzz';
+  else return num;
+};
 
 /*
 
 */
 
 for (const solution of [
-  secretSolution,
-  // stub,
+  // secretSolution,
+  stub,
 ]) {
   describe(solution.name + ': fizbuzzish', () => {
     describe('default parameter is 0', () => {
