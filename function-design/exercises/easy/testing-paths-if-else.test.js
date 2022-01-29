@@ -8,15 +8,17 @@
  * @param {any} value
  * @returns {boolean}
  */
-const stub = () => {};
+const stub = (value) => {
+  return Boolean(value);
+};
 
 /*
-
+1. Return the boolean version of the given value.
 */
 
 for (const solution of [
-  secretSolution,
-  // stub,
+  // secretSolution,
+  stub,
 ]) {
   /* Execution Paths
       when testing conditionals, you need to be test all paths
@@ -24,35 +26,41 @@ for (const solution of [
   describe(solution.name + ': determines if a value is truthy', () => {
     describe('solution can identify truthy values', () => {
       it('non-empty strings -> true', () => {
-        const actual = solution(_);
+        const actual = solution('asdf');
         expect(actual).toEqual(true);
       });
       it('numbers that are not 0 or NaN -> true', () => {
-        const actual = _;
-        expect(actual).toEqual(true);
+        const actual = 123;
+        expect(solution(actual)).toEqual(true);
       });
       it('true -> true', () => {
-        expect(solution(_)).toEqual(true);
+        expect(solution(true)).toEqual(true);
       });
     });
     describe('solution can identify falsy values', () => {
       it('"" -> flase', () => {
-        _;
+        const actual = '';
+        expect(solution(actual)).toEqual(false);
       });
       it('0 -> false', () => {
-        _;
+        const actual = 0;
+        expect(solution(actual)).toEqual(false);
       });
       it('NaN -> false', () => {
-        _;
+        const actual = NaN;
+        expect(solution(actual)).toEqual(false);
       });
       it('false -> false', () => {
-        _;
+        const actual = false;
+        expect(solution(actual)).toEqual(false);
       });
       it('undefined -> false', () => {
-        _;
+        const actual = undefined;
+        expect(solution(actual)).toEqual(false);
       });
       it('null -> false', () => {
-        _;
+        const actual = null;
+        expect(solution(actual)).toEqual(false);
       });
     });
   });
