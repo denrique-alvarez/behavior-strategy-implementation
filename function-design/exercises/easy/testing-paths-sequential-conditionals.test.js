@@ -13,32 +13,43 @@
  *  // false, false --> '00'
  *  // false, true --> '01'
  */
-const stub = () => {};
+const stub = (a = false, b = false) => {
+  if (typeof a !== 'boolean' && typeof b !== 'boolean') return 'Enter a boolean';
+  let c = String(Number(a));
+  let d = String(Number(b));
+  return c + d;
+};
 
 /*
-
+  1. Set the two parameters with default value 'false'.
+  2. Create a new variable where the boolean value of the first parameter can be converted into a number and then into a string. Keep in mind operation precedence.
+  3. Create a new variable where the boolean value of the second parameter can be converted into a number and then into a string. Keep in mind operation precedence.
+  4. Return the final result as a concatenated string.
 */
 
 for (const solution of [
-  secretSolution,
-  // stub,
+  // secretSolution,
+  stub,
 ]) {
   // this function only 4 possible combinations of arguments
   //  it's possible test them all and have 100% confidence in the function
   describe(solution.name + ': converts two booleans to binary', () => {
     it('true, true --> "11"', () => {
-      const actual = solution(_, _);
-      expect(actual).toEqual(_);
+      const actual = solution(true, true);
+      expect(actual).toEqual('11');
     });
     it('true, false --> "10"', () => {
-      const actual = _;
+      const actual = solution(true, false);
       expect(actual).toEqual('10');
     });
     it('false, true --> "01"', () => {
-      const actual = _;
-      _;
+      const actual = solution(false, true);
+      expect(actual).toEqual('01');
     });
-    it('_', () => {});
+    it('false, false --> "00"', () => {
+      const actual = solution(false, false);
+      expect(actual).toEqual('00');
+    });
   });
 }
 
