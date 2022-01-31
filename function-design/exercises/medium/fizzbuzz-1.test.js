@@ -15,7 +15,7 @@
 const stub = (num = 0) => {
 
   if (!Number.isInteger(num)) return 'Enter an integer';
-  if (num <= 0) return 'Enter a positive number';
+  if (0 > num) return 'Enter a positive number';
 
   if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
   else if (num % 3 === 0) return 'fizz';
