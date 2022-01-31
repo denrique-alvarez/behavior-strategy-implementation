@@ -2,7 +2,7 @@
 
 debugger;
 
-import { sayHi, sayBye } from 'script';
+import { sayHi, sayBye } from './script.js';
 
 const test1 = 'Hello, robin!' === sayHi('robin');
 const test2 = 'Bye, robin!' === sayBye('robin');
