@@ -1,5 +1,9 @@
 // #todo
 
-const sayHi = (user) => _;
+export const sayHi = (user) => {
+  return `Hello, ${user}!`;
+};
 
-const sayBye = (user) => _;
+export const sayBye = (user) => {
+  return `Bye, ${user}!`;
+};
