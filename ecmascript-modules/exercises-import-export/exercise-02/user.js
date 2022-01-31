@@ -1,3 +1,3 @@
 // #todo
 
-export const user = _;
+export const user = 'fendy';
