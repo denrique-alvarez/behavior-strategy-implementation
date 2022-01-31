@@ -26,8 +26,8 @@ const stub = (val1, val2) => {
 */
 
 for (const solution of [
-  secretSolution,
-  // stub,
+  // secretSolution,
+  stub,
 ]) {
   describe(solution.name + ': determines how similar two values are', () => {
     describe('when values are strictly equal', () => {
